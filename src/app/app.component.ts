@@ -4,7 +4,7 @@ import { RouterOutlet, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterLink],
   template: `
     <div class="pageWrapper">
       <header class="banner">
@@ -14,6 +14,8 @@ import { RouterOutlet, RouterLink } from '@angular/router';
       <nav class="navbar">
         <ul>
           <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="template">Template-Driven Example</a></li>
+          <li><a routerLink="reactive">Reactive Example</a></li>
           <li><a href="https://angular.dev/guide/forms" target="_blank">Forms in Angular&#8663;</a></li>
           <li><a href="https://angular.dev/guide/forms/reactive-forms" target="_blank">Reactive Forms&#8663;</a></li>
           <li><a href="https://angular.dev/guide/forms/form-validation" target="_blank">Validating Form Input&#8663;</a></li>
@@ -30,6 +32,8 @@ import { RouterOutlet, RouterLink } from '@angular/router';
         <nav class="footerNav">
           <ul>
             <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="template">Template-Driven Example</a></li>
+            <li><a routerLink="reactive">Reactive Example</a></li>
           </ul>
         </nav>
       </footer>
