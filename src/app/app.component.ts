@@ -17,6 +17,7 @@ import { RouterOutlet, RouterLink } from '@angular/router';
           <li><a routerLink="template">Template-Driven Example</a></li>
           <li><a routerLink="reactive">Reactive Example</a></li>
           <li><a routerLink="typed">Typed Example</a></li>
+          <li><a routerLink="dynamic">Dynamic Example</a></li>
         </ul>
       </nav>
 
@@ -33,6 +34,7 @@ import { RouterOutlet, RouterLink } from '@angular/router';
             <li><a routerLink="template">Template-Driven Example</a></li>
             <li><a routerLink="reactive">Reactive Example</a></li>
             <li><a routerLink="typed">Typed Example</a></li>
+            <li><a routerLink="dynamic">Dynamic Example</a></li>
           </ul>
         </nav>
       </footer>
