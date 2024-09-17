@@ -66,6 +66,7 @@ h2, h3, h4, h5, h6 {
   font-family: "Titillium Web", Verdana, Helvetica, sans-serif;
 }
 
+/* navication styles */
 .navbar {
   background-color: silver;
   border-bottom: solid darkgrey 3px;
@@ -97,6 +98,7 @@ h2, h3, h4, h5, h6 {
   color: inherit;
 }
 
+/* Body styles */
 .pageHeader {
   text-align: center;
   font-size: 2rem;
@@ -107,6 +109,44 @@ p.dropCap:first-letter {
   font-size: 1.5rem;
 }
 
+/* Form styles */
+label, input {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, input[type="submit"] {
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+input[type="email"], input[type="password"] {
+  width: 100%;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  float: right;
+}
+
+.error {
+  color: red;
+  padding: 5px;
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.ng-pristine[required] {
+  border: none;
+}
+
+/* Footer Styles */
 .footer {
   background-color: silver;
   border-top: solid darkgrey 3px;

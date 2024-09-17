@@ -9,23 +9,20 @@ import { CommonModule } from '@angular/common';
   imports: [ReactiveFormsModule, CommonModule],
   template: `
     <div class="form-container">
-    <pre>{{ testForm.value | json }}</pre>
       <form [formGroup]="testForm" (ngSubmit)="submitForm()" class="test-form">
         <fieldset>
           <legend>Test Form</legend>
-          <div formGroupName="name">
-            <label for="firstName">First Name</label>
-            <input formControlName="firstName" type="text" id="firstName" name="firstName">
-            <!-- @if(testForm.controls['firstName'].touched && testForm.controls['firstName'].hasError('required')) {
-              <small class="error">First Name is required.</small>
-            } -->
+          <label for="firstName">First Name</label>
+          <input formControlName="firstName" type="text" id="firstName" name="firstName">
+          <!-- @if(testForm.controls['firstName'].touched && testForm.controls['firstName'].hasError('required')) {
+            <small class="error">First Name is required.</small>
+          } -->
 
-            <label for="lastName">Last Name</label>
-            <input formControlName="lastName" type="text" id="lastName" name="lastName">
-            <!-- @if(testForm.controls['lastName'].touched && testForm.controls['lastName'].hasError('required')) {
-              <small class="error">Last Name is required.</small>
-            } -->
-          </div>
+          <label for="lastName">Last Name</label>
+          <input formControlName="lastName" type="text" id="lastName" name="lastName">
+          <!-- @if(testForm.controls['lastName'].touched && testForm.controls['lastName'].hasError('required')) {
+            <small class="error">Last Name is required.</small>
+          } -->
 
           <label for="email">Email</label>
           <input formControlName="email" type="email" id="email" name="email">
@@ -63,29 +60,7 @@ import { CommonModule } from '@angular/common';
     <pre>{{ testForm.value | json }}</pre>
   `,
   styles: `
-    label, input {
-      display: block;
-      margin-bottom: 5px;
-    }
 
-    input, input[type="submit"] {
-      padding: 8px;
-      box-sizing: border-box;
-    }
-
-    input[type="email"], input[type="password"] {
-      width: 100%;
-    }
-
-    input[type="submit"] {
-      margin-top: 10px;
-      float: right;
-    }
-
-    .error {
-      color: red;
-      padding: 5px;
-    }
   `
 })
 export class MyReactiveFormComponent {
