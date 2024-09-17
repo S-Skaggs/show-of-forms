@@ -17,9 +17,6 @@ import { RouterOutlet, RouterLink } from '@angular/router';
           <li><a routerLink="template">Template-Driven Example</a></li>
           <li><a routerLink="reactive">Reactive Example</a></li>
           <li><a routerLink="typed">Typed Example</a></li>
-          <li><a href="https://angular.dev/guide/forms" target="_blank">Forms in Angular<sup>&#8663;</sup></a></li>
-          <li><a href="https://angular.dev/guide/forms/reactive-forms" target="_blank">Reactive Forms<sup>&#8663;</sup></a></li>
-          <li><a href="https://angular.dev/guide/forms/form-validation" target="_blank">Validating Form Input<sup>&#8663;</sup></a></li>
         </ul>
       </nav>
 
