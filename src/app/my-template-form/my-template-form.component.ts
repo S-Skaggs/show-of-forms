@@ -6,7 +6,7 @@ export interface User {
   language: string;
 }
 
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, viewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
   imports: [FormsModule, CommonModule],
   template: `
     <div class="form-container">
-      <form class="test-form" #testForm="ngForm" (ngSubmit)="submitForm(); testForm.reset();">
+      <form class="test-form" #testForm="ngForm" (ngSubmit)="submitForm();">
         <fieldset>
           <legend>Test Form</legend>
           <label for="firstName">First Name</label>
@@ -74,7 +74,10 @@ export class MyTemplateFormComponent {
     'German'
   ];
 
-  // Declare variables including our User model
+  // Declare variables
+  // This uses a decorator to create a reference to the testForm
+  @ViewChild('testForm') public testForm: NgForm | null = null;
+  // User models
   newUser: User;
   submittedUser: User;
 
@@ -94,5 +97,8 @@ export class MyTemplateFormComponent {
   resetForm() {
     // Clear form values
     this.newUser = { firstName: '', lastName: '', email: '', password: '', language: '' }
+    // Clear the form
+    // Since this.testForm may be null we must use the optional property accessor ?.
+    this.testForm?.reset();
   }
 }
