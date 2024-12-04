@@ -85,7 +85,7 @@ export class MyReactiveFormComponent implements OnInit {
     name: [null, Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(100)])],
     description: ['', Validators.compose([Validators.maxLength(500)])],
     quantity: [0, Validators.compose([Validators.required, Validators.min(0)])],
-    price: [0, Validators.compose([Validators.required, Validators.min(0.01), Validators.pattern('/^\d*\.?\d?\d?$/')])]
+    price: [0, Validators.compose([Validators.required, Validators.min(0.01), Validators.pattern('\\d+(\\.\\d{1,2})?')])]
   });
 
   constructor(private fb: FormBuilder) {
