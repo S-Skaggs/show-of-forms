@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist/show-of-forms",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -31,11 +31,6 @@
           },
           "configurations": {
             "production": {
-              "optimization": {
-                "scripts": true,
-                "styles": true,
-                "fonts": false
-              },
               "budgets": [
                 {
                   "type": "initial",
